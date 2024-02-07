@@ -6,7 +6,7 @@ function GalleryHome() {
         <>
         {/* TODO add search */}
         <SearchForm/>
-        <Carousel />
+       <Carousel /> 
         {/* TODO add search result area */}
         </>
     );
