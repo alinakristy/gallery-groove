@@ -4,7 +4,7 @@ function GalleryHome() {
     return (
         <>
         {/* TODO add search */}
-        <Carousel />
+       <Carousel /> 
         {/* TODO add search result area */}
         </>
     );
