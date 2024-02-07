@@ -1,34 +1,31 @@
+import CarouselItem from './CarouselItem';
+import projects from '../data/projects.json';
+
 function Carousel() {
+
+    function getSlideName(id) {
+        return "Slide " + getSlideNumber(id);
+    }
+
+    function getSlideNumber(id) {
+        return id-1;
+    }
 
     return (
         <div id="carousel" className="carousel slide w-100">
             <div className="carousel-indicators">
-                <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                {projects.map((project) => {
+                    if (project.id == 1) { //first
+                        return <button key={project.id} type="button" data-bs-target="#carousel" data-bs-slide-to={getSlideNumber(project.id)} className="active" aria-current="true" aria-label={getSlideName(project.id)}></button>
+                    } else {
+                        return <button key={project.id} type="button" data-bs-target="#carousel" data-bs-slide-to={getSlideNumber(project.id)} aria-label={getSlideName(project.id)}></button>
+                    }
+                })}
             </div>
             <div className="carousel-inner">
-                <div className="carousel-item active" data-bs-interval="10000">
-                    <img src="https://www.pacegallery.com/media/images/90123_banner.width-2000.webp" className="d-block w-100" alt="..." />
-                    <div className="carousel-caption d-none d-md-block">
-                        <h5 className="fw-bolder text-white fs-1 carousel-outline-text">Glenn Kaino</h5>
-                        <p className="fw-bold text-white fs-2 carousel-outline-text">Walking with a Tiger</p>
-                    </div>
-                </div>
-                <div className="carousel-item" data-bs-interval="2000">
-                    <img src="https://www.pacegallery.com/media/images/88222_banner.width-2000.webp" className="d-block w-100" alt="..." />
-                    <div className="carousel-caption d-none d-md-block">
-                        <h5 className="fw-bolder text-white fs-1 carousel-outline-text">Mika Tajima</h5>
-                        <p className="fw-bold text-white fs-2 carousel-outline-text">Energetics</p>
-                    </div>
-                </div>
-                <div className="carousel-item">
-                    <img src="https://www.pacegallery.com/media/images/86524_Wesley_COMP04-High_Resolution___300_dp.width-2000.webp" className="d-block w-100" alt="..." />
-                    <div className="carousel-caption d-none d-md-block">
-                        <h5 className="fw-bolder text-white fs-1 carousel-outline-text">John Wesley</h5>
-                        <p className="fw-bold text-white fs-2 carousel-outline-text">WesleyWorld: Works on Paper and Objects 1961-2004</p>
-                    </div>
-                </div>
+                {projects.map((project) => {
+                    return <CarouselItem key={project.id} id={project.id} title={project.title} description={project.description} image={project.image} />;
+                })}
             </div>
             <button className="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
                 <span className="carousel-control-prev-icon" aria-hidden="true"></span>

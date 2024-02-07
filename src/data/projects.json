@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "title": "Marina Perez Simão",
+        "description": "Solanaceae",
+        "image": "https://www.pacegallery.com/media/images/90109_banner.width-2000.webp"
+    },
+    {
+        "id": 2,
+        "title": "Glenn Kaino",
+        "description": "Walking with a Tiger",
+        "image": "https://www.pacegallery.com/media/images/90123_banner.width-2000.webp"
+    },
+    {
+        "id": 3,
+        "title": "Mika Tajima",
+        "description": "Energetics",
+        "image": "https://www.pacegallery.com/media/images/88222_banner.width-2000.webp"
+    },
+    {
+        "id": 4,
+        "title": "John Wesley",
+        "description": "WesleyWorld: Works on Paper and Objects 1961-2004",
+        "image": "https://www.pacegallery.com/media/images/86524_Wesley_COMP04-High_Resolution___300_dp.width-2000.webp"
+    },
+    {
+        "id": 5,
+        "title": "Mao Yan",
+        "description": "New Paintings",
+        "image": "https://www.pacegallery.com/media/images/Mao_Yan_INS_LDN_01.width-2000.webp"
+    }
+]
