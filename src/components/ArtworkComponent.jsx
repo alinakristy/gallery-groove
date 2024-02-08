@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import BasicMasonry from './Masonry';
 import SearchForm from './searchForm';
 
 const ArtworkComponent = () => {
@@ -33,9 +34,7 @@ const ArtworkComponent = () => {
   return (
     <div>
       <SearchForm onSearch={handleSearch} />
-      {artworks.map(artwork => (
-        <img key={artwork.id} src={artwork.iiifAPI} alt={artwork.title} />
-      ))}
+      <BasicMasonry artworks={artworks} />
     </div>
   );
 };
