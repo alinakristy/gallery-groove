@@ -6,6 +6,7 @@ function SearchForm({ onSearch }) {
   const handleSubmit = (event) => {
     event.preventDefault();
     onSearch(searchArt);
+    console.log(onSearch);
   };
 
   return (
