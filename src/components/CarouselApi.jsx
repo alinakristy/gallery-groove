@@ -7,15 +7,15 @@ const CarouselApi = () => {
     const [callMade, setCallMade] = useState(false);
 
     useEffect(() => {
-        const fetchArtworks = async () => {
-            const artworkLink = `https://api.artic.edu/api/v1/artworks?page=1&limit=5&fields=id,title,description,image_id,thumbnail`;
+        const fetchArtworks = async () => {//
+            const artworkLink = `https://api.artic.edu/api/v1/artworks/search?q=landscape%painting&page=1&limit=5&fields=id,title,description,image_id,thumbnail`;
 
             try {
                 const response = await axios.get(artworkLink);
                 const data = response.data.data;
                 const artworksWithIIIF = data.map(artwork => ({
                     ...artwork,
-                    iiifAPI: `https://www.artic.edu/iiif/2/${artwork.image_id}/full/pct:30/0/default.jpg`
+                    iiifAPI: `https://www.artic.edu/iiif/2/${artwork.image_id}/full/pct:100/0/default.jpg`
                 }));
 
                 setArtworks(artworksWithIIIF);
