@@ -9,7 +9,7 @@ function CarouselItem(props) {
     }
 
     return ( <div className={firstOrNotClass()} data-bs-interval="10000">
-                    <img src={props.image} className="d-block w-100" alt={description()} />
+                    <img src={props.image} className="d-block img-fluid carousel-image" alt={description()} />
                     <div className="carousel-caption d-none d-md-block">
                         <h5 className="fw-bolder text-white fs-1 carousel-outline-text">{props.title}</h5>
                         <p className="fw-bold text-white fs-2 carousel-outline-text">{props.description}</p>
