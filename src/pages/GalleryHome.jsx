@@ -1,12 +1,14 @@
 import Carousel from '../components/Carousel';
 import SearchForm from '../components/searchForm';
+import ArtworkComponent from '../components/ArtworkComponent';
 
 function GalleryHome() {
     return (
         <>
         {/* TODO add search */}
-        <SearchForm/>
+        
        <Carousel /> 
+       <ArtworkComponent />
         {/* TODO add search result area */}
         </>
     );
