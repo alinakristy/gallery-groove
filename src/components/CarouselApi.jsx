@@ -7,8 +7,11 @@ const CarouselApi = () => {
     const [callMade, setCallMade] = useState(false);
 
     useEffect(() => {
-        const fetchArtworks = async () => {
-            const artworkLink = `https://api.artic.edu/api/v1/artworks/search?q=landscape%painting&page=1&limit=5&fields=id,title,description,image_id,thumbnail`;
+
+        const fetchArtworks = async () => {//
+            const artworkLink = `https://api.artic.edu/api/v1/artworks/search?q=golden&page=1&limit=5&fields=id,title,artist_display,image_id,thumbnail`;
+
+
 
             try {
                 const response = await axios.get(artworkLink);
@@ -62,8 +65,10 @@ const CarouselApi = () => {
             <div className="carousel-inner">
                 {artworks.map((artwork) => {
                     const idx = indexOf(artwork);
-                    // TODO add descripion if needed, now descriptions are very long also can contain html tags like <p> or null from API
-                    return <CarouselItem key={getKey(idx)} id={idx} title={artwork.title} description="" image={artwork.iiifAPI} />;
+
+                    return <CarouselItem key={getKey(idx)} id={idx} title={artwork.title} description={artwork.artist_display} image={artwork.iiifAPI} />;
+
+
                 })}
             </div>
             <button className="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
