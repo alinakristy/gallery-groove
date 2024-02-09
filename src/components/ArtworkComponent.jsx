@@ -9,7 +9,7 @@ const ArtworkComponent = () => {
 
   useEffect(() => {
     const fetchArtworks = async () => {
-      const chicagolink = `https://api.artic.edu/api/v1/artworks/search?q=${searchTerm}&fields=id,artist_display,date_end,title,image_id&limit=20`;
+      const chicagolink = `https://api.artic.edu/api/v1/artworks/search?q=${searchTerm}&fields=id,artist_display,title,image_id&limit=20`;
 
       try {
         const response = await axios.get(chicagolink);
