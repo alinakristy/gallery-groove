@@ -31,8 +31,8 @@ export default function BasicMasonry({ artworks }) {
         {artworks.map((artwork, index) => (
           <Item key={index}>
             <img src={artwork.iiifAPI} alt={artwork.title} style={{ width: '100%', height: 'auto' }} />
-            <p className="overlay">{artwork.title}</p>
-            <p className="overlay">{artwork.artist_display}</p>
+            <h5 className="overlay card-title my-2 fw-semibold">{artwork.title}</h5>
+            <p className="overlay card-text my-2 fst-italic">{artwork.artist_display}</p>
             <button type="submit" className="btn" onClick={() => handleButtonClick(artwork)}>
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-heart-fill" viewBox="0 0 16 16">
                 <path fillRule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314" />
