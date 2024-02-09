@@ -9,7 +9,7 @@ function View() {
     <div>
       {faveData.map((element, index) => (
         <div key={index}>
-          <img src={element.image_id} alt={element.title} />
+          <img src={`https://www.artic.edu/iiif/2/${element.image_id}/full/843,/0/default.jpg`} alt={element.title} />
           <h3>{element.title}</h3>
           <p>{element.artist_display}</p>
         </div>

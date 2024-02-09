@@ -4,48 +4,25 @@ import { styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
 import Masonry from '@mui/lab/Masonry';
 
-const Button = styled('button')({
-  position: 'absolute',
-  bottom: 16,
-  left: '50%',
-  transform: 'translateX(-50%)',
-  padding: '8px 16px',
-  background: '#2196f3',
-  color: '#fff',
-  border: 'none',
-  borderRadius: 4,
-  cursor: 'pointer',
-  opacity: 0,
-  transition: 'opacity 0.3s',
-  pointerEvents: 'none',
-  '&:hover': {
-    opacity: 1,
-  },
-});
-
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
   ...theme.typography.body2,
   padding: theme.spacing(0.5),
   textAlign: 'center',
   color: theme.palette.text.secondary,
+  transition: 'transform 0.3s',
+  '&:hover': {
+    transform: 'scale(1.03)',
+  },
 }));
 
-let favesArray = [""];
+let favesArray = [];
 
 export default function BasicMasonry({ artworks }) {
   const handleButtonClick = (artwork) => {
-    
-  
     favesArray.push(artwork);
-
     console.log(favesArray);
-
-
     localStorage.setItem("faves", JSON.stringify(favesArray));
-
-  
-  
   };
 
   return (
@@ -68,3 +45,5 @@ export default function BasicMasonry({ artworks }) {
   );
 }
 
+
+//localStorage.clear();
