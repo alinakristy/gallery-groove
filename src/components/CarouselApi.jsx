@@ -10,15 +10,12 @@ const CarouselApi = () => {
 
         const fetchArtworks = async () => {//
             const artworkLink = `https://api.artic.edu/api/v1/artworks/search?q=golden&page=1&limit=5&fields=id,title,artist_display,image_id,thumbnail`;
-
-
-
             try {
                 const response = await axios.get(artworkLink);
                 const data = response.data.data;
                 const artworksWithIIIF = data.map(artwork => ({
                     ...artwork,
-                    iiifAPI: `https://www.artic.edu/iiif/2/${artwork.image_id}/full/pct:100/0/default.jpg`
+                    iiifAPI: `https://www.artic.edu/iiif/2/${artwork.image_id}/full/pct:50/0/default.jpg`
                 }));
 
                 setArtworks(artworksWithIIIF);
