@@ -2,7 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import * as bootstrap from 'bootstrap';
 import View from './pages/View';
 import About from './pages/About';
-import NavTabs from './components/Nav';
+import NavBar from './components/NavBar';
 
 import './App.css';
 
@@ -15,7 +15,7 @@ import Footer from './components/Footer';
 
 function App() {
   return <Router>
-    <NavTabs />
+    <NavBar />
     <Routes>
 
     <Route path="/" element={<GalleryHome />} />
