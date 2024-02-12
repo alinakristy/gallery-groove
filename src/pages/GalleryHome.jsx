@@ -1,12 +1,13 @@
 import CarouselApi from '../components/CarouselApi';
-import Carousel from '../components/Carousel';
+import CarouselLocal from '../components/CarouselLocal';
 import ArtworkComponent from '../components/ArtworkComponent';
 import View from './View';
+
 function GalleryHome() {
     return (
         <>
-       {/* <CarouselApi /> */}
-       <Carousel />
+       <CarouselApi />
+       {/* <CarouselLocal /> */}
        <ArtworkComponent />
         </>
     );
