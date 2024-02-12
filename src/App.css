@@ -1,3 +1,7 @@
+.top {
+  place-items: flex-start;
+}
+
 .carousel-outline-text {
   color: black;
   text-shadow:
@@ -19,11 +23,13 @@
   height: 5rem;
 }
 
+.carousel-item {
+  max-height: 600px;
+}
+
 .carousel-image {
   margin-left: auto;
   margin-right: auto;
-  object-fit: contain;
-  max-width: 1000px;
-  max-height: 1000px;
+  object-fit: cover;
 }
 
