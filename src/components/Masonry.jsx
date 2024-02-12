@@ -16,14 +16,25 @@ const Item = styled(Paper)(({ theme }) => ({
   },
 }));
 
-let favesArray = [];
-
 export default function BasicMasonry({ artworks }) {
+  const [favesArray, setFavesArray] = React.useState([]);
+  const [messageMap, setMessageMap] = React.useState({});
+
   const handleButtonClick = (artwork) => {
-    favesArray.push(artwork);
-    console.log(favesArray);
-    localStorage.setItem("faves", JSON.stringify(favesArray));
+    // Checking if artwork exists
+    if (!favesArray.some(item => item.id === artwork.id)) {
+      const updatedFavesArray = [...favesArray, artwork];
+      setFavesArray(updatedFavesArray);
+      const mergedFavesArray = JSON.parse(localStorage.getItem("faves")) || [];
+      if (!mergedFavesArray.some(item => item.id === artwork.id)) {
+        localStorage.setItem("faves", JSON.stringify([...mergedFavesArray, artwork]));
+      }
+      setMessageMap({ ...messageMap, [artwork.id]: 'Added to favorites' });
+    } else {
+      setMessageMap({ ...messageMap, [artwork.id]: 'Already in favorites' });
+    }
   };
+  
 
   return (
     <Box sx={{ width: '100%', minHeight: 393 }}>
@@ -38,12 +49,12 @@ export default function BasicMasonry({ artworks }) {
                 <path fillRule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314" />
               </svg>
             </button>
+            {messageMap[artwork.id] && (
+              <div>{messageMap[artwork.id]}</div>
+            )}
           </Item>
         ))}
       </Masonry>
     </Box>
   );
 }
-
-
-//localStorage.clear();
