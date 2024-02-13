@@ -10,9 +10,11 @@ const Item = styled(Paper)(({ theme }) => ({
   padding: theme.spacing(0.5),
   textAlign: 'center',
   color: theme.palette.text.secondary,
-  transition: 'transform 0.3s',
+  // transition: 'transform 0.3s',
+  transition: 'all 0.3s ease-in',
   '&:hover': {
     transform: 'scale(1.03)',
+    filter: 'brightness(50%)',
   },
 }));
 
@@ -27,7 +29,7 @@ export default function BasicMasonry({ artworks }) {
 
   return (
     <Box sx={{ width: '100%', minHeight: 393 }}>
-      <Masonry columns={4} spacing={2} sx={{ width: '100%' }}>
+      <Masonry columns={3} spacing={10} sx={{ width: '100%' }}>
         {artworks.map((artwork, index) => (
           <Item key={index}>
             <img src={artwork.iiifAPI} alt={artwork.title} style={{ width: '100%', height: 'auto' }} />
