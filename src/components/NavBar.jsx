@@ -32,6 +32,9 @@ function NavBar() {
                         <li className="nav-item col-5">
                             <NavLink className={({ isActive }) => isActive ? 'nav-link active fw-bold' : 'nav-link'} to="/view" end>View</NavLink>
                         </li>
+                        <li className="nav-item col-5">
+                            <NavLink className={({ isActive }) => isActive ? 'nav-link active fw-bold' : 'nav-link'} to="/details" end>Details</NavLink>
+                        </li>
                     </ul>
                 </div>
             </div>
