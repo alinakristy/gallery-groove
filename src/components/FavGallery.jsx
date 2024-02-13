@@ -97,8 +97,8 @@ function Item({ artwork, onRemove, isMdScreen }) {
       <h5 className="overlay card-title my-2 fw-semibold">{artwork.title}</h5>
       <p className="overlay card-text my-2 fst-italic">{artwork.artist_display}</p>
       <div className="d-flex align-items-center flex-row">
-      <button type="submit" className="btn" onClick={() => onRemove()}><FaHeart /></button>
-      <button type="submit" className="btn" onClick={() => handleButtonClickInfo(artwork)}> <Link to={"/details"}>  <FaCircleInfo /></Link>
+      <button type="submit" className="btn" onClick={() => onRemove()}><FaHeart size={32}/></button>
+      <button type="submit" className="btn" onClick={() => handleButtonClickInfo(artwork)}> <Link to={"/details"}>  <FaCircleInfo size={32}/></Link>
       </button>
       </div>
     </Paper>

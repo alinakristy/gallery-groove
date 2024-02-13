@@ -21,8 +21,8 @@ function About() {
                 Innovative frontend maestro, turning code into captivating interfaces. HTML, CSS, and JavaScript are my playground. Let's build something amazing together!
                 </Card.Text>
                 <div className="d-flex justify-content-lg-center" style={{ gap: '1rem' }}>
-                    <a className='btn btn-secondary px-1 py-1 col-4' href='https://github.com/alinakristy'><FaGithub /></a>
-                    <a className='btn btn-primary px-1 py-1 col-4' href='https://www.linkedin.com/in/alina-cristi-osipov/'><FaLinkedinIn /></a>
+                    <a className='btn btn-secondary px-1 py-1 col-4' href='https://github.com/alinakristy'><FaGithub size={32}/></a>
+                    <a className='btn btn-primary px-1 py-1 col-4' href='https://www.linkedin.com/in/alina-cristi-osipov/'><FaLinkedinIn size={32}/></a>
                 </div>
             </Card.Body>
         </Card>
@@ -35,8 +35,8 @@ function About() {
                 Pixel perfectionist and coding enthusiast. Crafting user experiences that not only look good but feel intuitive. Excited to bring creativity to your frontend projects!
                 </Card.Text>
                 <div className="d-flex justify-content-lg-center" style={{ gap: '1rem' }}>
-                    <a className='btn btn-secondary px-1 py-1 col-4' href='https://github.com/Sara-Badini-Confalonieri'><FaGithub /></a>
-                    <a className='btn btn-primary px-1 py-1 col-4' href='https://www.linkedin.com/in/sara-badini-confalonieri-594975b4/'><FaLinkedinIn /></a>
+                    <a className='btn btn-secondary px-1 py-1 col-4' href='https://github.com/Sara-Badini-Confalonieri'><FaGithub size={32}/></a>
+                    <a className='btn btn-primary px-1 py-1 col-4' href='https://www.linkedin.com/in/sara-badini-confalonieri-594975b4/'><FaLinkedinIn size={32}/></a>
                 </div>
             </Card.Body>
         </Card>
@@ -49,8 +49,8 @@ function About() {
                 Passionate about blending design and functionality. HTML and CSS whisperer, with a knack for making websites sing. Let's create a seamless user journey for everyone!
                 </Card.Text>
                 <div className="d-flex justify-content-lg-center" style={{ gap: '1rem' }}>
-                    <a className='btn btn-secondary px-1 py-1 col-4' href='https://github.com/xanlefee'><FaGithub /></a>
-                    <a className='btn btn-primary px-1 py-1 col-4' href='https://www.linkedin.com/in/xanthe-horner/'><FaLinkedinIn /></a>
+                    <a className='btn btn-secondary px-1 py-1 col-4' href='https://github.com/xanlefee'><FaGithub size={32}/></a>
+                    <a className='btn btn-primary px-1 py-1 col-4' href='https://www.linkedin.com/in/xanthe-horner/'><FaLinkedinIn size={32}/></a>
                 </div>
             </Card.Body>
         </Card>
@@ -63,8 +63,8 @@ function About() {
                 Frontend enthusiast with a keen eye for detail. JavaScript ninja by day, CSS wizard by night. Ready to transform ideas into visually stunning digital realities aka websites.
                 </Card.Text>
                 <div className="d-flex justify-content-lg-center" style={{ gap: '1rem' }}>
-                    <a className='btn btn-secondary px-1 py-1 col-4' href='https://github.com/najmamusa'><FaGithub /></a>
-                    <a className='btn btn-primary px-1 py-1 col-4' href='https://google.com/'><FaLinkedinIn /></a>
+                    <a className='btn btn-secondary px-1 py-1 col-4' href='https://github.com/najmamusa'><FaGithub size={32}/></a>
+                    <a className='btn btn-primary px-1 py-1 col-4' href='https://google.com/'><FaLinkedinIn size={32}/></a>
                 </div>
             </Card.Body>
         </Card>

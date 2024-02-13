@@ -52,9 +52,9 @@ export default function BasicMasonry({ artworks }) {
 
   function showFavIcon(artwork) {
     if (favesArray.some(item => item.id === artwork.id)) {
-      return <FaHeart />;
+      return <FaHeart size={32}/>;
     } else {
-      return <CiHeart />;
+      return <CiHeart size={32}/>;
     }
 
   }
@@ -68,7 +68,7 @@ export default function BasicMasonry({ artworks }) {
             <h5 className="overlay card-title my-2 fw-semibold">{artwork.title}</h5>
             <p className="overlay card-text my-2 fst-italic">{artwork.artist_display}</p>
             <button type="submit" className="btn" onClick={() => handleButtonClick(artwork)}>{showFavIcon(artwork)}</button>
-            <button type="submit" className="btn" onClick={() => handleButtonClickInfo(artwork)}> <Link to={"details"}> <FaCircleInfo /> </Link></button>
+            <button type="submit" className="btn" onClick={() => handleButtonClickInfo(artwork)}> <Link to={"details"}> <FaCircleInfo size={32}/> </Link></button>
 
             {messageMap[artwork.id] && (
               <div>{messageMap[artwork.id]}</div>
