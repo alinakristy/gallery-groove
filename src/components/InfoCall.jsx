@@ -39,7 +39,7 @@ const InfoCall = () => {
             {artworkData ? (
                 <div>
 
-                    <h1 className="my-3">{artworkData.title}</h1>
+                    <h1>{artworkData.title}</h1>
                     <h5>{artworkData.artist_display}</h5>
 
                     <img src={`https://www.artic.edu/iiif/2/${artworkData.image_id}/full/843,/0/default.jpg`} className="imgdisplay" alt={artworkData.title} />
@@ -50,14 +50,14 @@ const InfoCall = () => {
                     <br></br>
 
                     <ul className="list-group list-group-flush">
-                        <li className="list-group-item"><h3 className="mb-10">Medium</h3><p>{artworkData.medium_display}</p></li>
-                        <li className="list-group-item"><h3 className="mb-3">Dimensions</h3><p>{artworkData.dimensions}</p></li>
-                        <li className="list-group-item"><h3 className="mb-3">Style</h3><p>{artworkData.style_title}</p></li>
-                        <li className="list-group-item"><h3 className="mb-3">Category</h3><p>{artworkData.category_titles[0]}</p></li>
-                        <li className="list-group-item"><h3 className="mb-3">Origin</h3><p>{artworkData.place_of_origin}</p></li>
-                        <li className="list-group-item"><h3 className="mb-3">Provenance</h3><p> {getridoftags(artworkData.provenance_text)}</p></li>
-                        <li className="list-group-item"><h3 className="mb-3">Gallery</h3><p> {getridoftags(artworkData.gallery_title)}</p></li>
-                        <li className="list-group-item"><h3 className="mb-3">Exhibition History</h3><p> {getridoftags(artworkData.exhibition_history)}</p></li>
+                        <li className="list-group-item"><h3>Medium</h3><p>{artworkData.medium_display}</p></li>
+                        <li className="list-group-item"><h3>Dimensions</h3><p>{artworkData.dimensions}</p></li>
+                        <li className="list-group-item"><h3>Style</h3><p>{artworkData.style_title}</p></li>
+                        <li className="list-group-item"><h3>Category</h3><p>{artworkData.category_titles[0]}</p></li>
+                        <li className="list-group-item"><h3>Origin</h3><p>{artworkData.place_of_origin}</p></li>
+                        <li className="list-group-item"><h3>Provenance</h3><p> {getridoftags(artworkData.provenance_text)}</p></li>
+                        <li className="list-group-item"><h3>Gallery</h3><p> {getridoftags(artworkData.gallery_title)}</p></li>
+                        <li className="list-group-item"><h3>Exhibition History</h3><p> {getridoftags(artworkData.exhibition_history)}</p></li>
                     </ul>
 
 
