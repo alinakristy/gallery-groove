@@ -571,10 +571,13 @@ body.search-is-visible .s-header__search-inner {
       font-size    : var(--text-xxl);
       padding-left : 2.2rem;
   }
+}
 
   .s-header__nav>li::before {
       top : 2.6rem;
   }
+.top {
+  place-items: flex-start;
 }
 
 .carousel-outline-text {
@@ -598,10 +601,24 @@ body.search-is-visible .s-header__search-inner {
   height: 5rem;
 }
 
+.carousel-item {
+  max-height: 600px;
+}
+
 .carousel-image {
   margin-left: auto;
   margin-right: auto;
-  object-fit: contain;
-  max-width: 1000px;
-  max-height: 1000px;
+  object-fit: cover;
+}
+
+.marginclass {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.imgdisplay {
+
+  width: 100%;
+  
+
 }
