@@ -3,6 +3,7 @@ import Box from '@mui/material/Box';
 import { styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
 import Masonry from '@mui/lab/Masonry';
+
 import { Link } from 'react-router-dom';
 
 const Container = styled(Box)({
@@ -10,6 +11,12 @@ const Container = styled(Box)({
   justifyContent: 'center',
   margin: '20px',
 });
+
+
+import { FaHeart } from "react-icons/fa";
+import { CiHeart } from "react-icons/ci";
+import { FaCircleInfo } from "react-icons/fa6";
+
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -24,9 +31,15 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 
 export default function BasicMasonry({ artworks }) {
-  const [favesArray, setFavesArray] = React.useState([]);
+  const [favesArray, setFavesArray] = React.useState(getCurrentFavItems());
   const [messageMap, setMessageMap] = React.useState({});
   const [selectedArtworkId, setSelectedArtworkId] = React.useState(null);
+
+
+
+  function getCurrentFavItems() {
+    return JSON.parse(localStorage.getItem("faves")) || [];
+  }
 
   const handleButtonClick = (artwork) => {
     // Checking if artwork exists
@@ -49,12 +62,24 @@ export default function BasicMasonry({ artworks }) {
     localStorage.setItem("selectedArtworkId", artwork.id);
   };
 
+
+  function showFavIcon(artwork) {
+    if (favesArray.some(item => item.id === artwork.id)) {
+      return <FaHeart size={32}/>;
+    } else {
+      return <CiHeart size={32}/>;
+    }
+
+  }
+
+
   return (
     <Container>
       <Masonry columns={{ xs: 1, sm: 2, md: 4 }} spacing={2} sx={{ width: '100%' }}>
         {artworks.map((artwork, index) => (
           <Item key={index}>
             <img src={artwork.iiifAPI} alt={artwork.title} style={{ width: '100%', height: 'auto' }} />
+
             <h5 className="overlay card-title mt-3 mx-3 fw-semibold">{artwork.title}</h5>
             <p className="overlay card-text my-2 mx-3  fst-italic">{artwork.artist_display}</p>
             <button type="submit" className="btn" onClick={() => handleButtonClick(artwork)}>
@@ -70,6 +95,13 @@ export default function BasicMasonry({ artworks }) {
                 </svg>
               </Link>
             </button>
+
+            <h5 className="overlay card-title my-2 fw-semibold">{artwork.title}</h5>
+            <p className="overlay card-text my-2 fst-italic">{artwork.artist_display}</p>
+            <button type="submit" className="btn" onClick={() => handleButtonClick(artwork)}>{showFavIcon(artwork)}</button>
+            <button type="submit" className="btn" onClick={() => handleButtonClickInfo(artwork)}> <Link to={"details"}> <FaCircleInfo size={32}/> </Link></button>
+
+
             {messageMap[artwork.id] && (
               <div>{messageMap[artwork.id]}</div>
             )}
