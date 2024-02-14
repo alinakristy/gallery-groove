@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Gilda+Display&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Ultra&display=swap');
 .top {
   place-items: flex-start;
 }
@@ -42,5 +43,201 @@
 
   width: 100%;
   
+}
+
+
+h1 {
+  
+  font-family: "Abril Fatface", serif;
+  font-weight: 400;
+  font-style: normal;
+   
+}
+
+  h4, h5, .MuiMasonry-root {
+  font-family: "Gilda Display", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+p, h2, h3 {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+
+  font-style: normal;
+}
+
+.MuiMasonry-root .card-title, .card-text{
+  
+  color: #000;
+  position: relative;
+  left: 0;
+ 
+}
+
+
+.wrap {
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 3%;
+}
+
+.wrap1{
+
+  margin-top: 2%;
+
+}
+
+.overlay {
+  position: relative;
+  left: 0;
+  bottom: 0;
+}
+
+
+.btnsearch {
+
+  border: none;
+  background-color: rgb(167, 177, 177);
+  
+}
+
+.btnsearch:hover {
+
+background-color: hotpink;
+}
+
+.btn1:hover {
+
+  color: hotpink;
+}
+
+
+
+.center {
+  text-align: center;
+  margin-top: 3%;
+}
+
+.centersmall {
+  text-align: center;
+}
+
+.bound .overlay{
+
+ position: absolute;
+ bottom: 0;
+  display: none;
+}
+
+.bound:hover .overlay {
+  display: block;
+
+}
+
+.bound:hover .pic {
+  opacity: 50%;
+}
+
+
+.bound  {
+
+  position: relative;
+}
+
+
+.card-title, .card-text{
+
+
+width: fit-content;
+color: rgb(0, 0, 0) !important;
+text-align: justify;
+margin: 1.5%;
+
+}
+
+.card-title {
+
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+ 
+  font-style: normal;
+
+}
+
+.card-text {
+  font-family: "Gilda Display", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: medium;
+
+
+}
+
+.btnalign {
+  display: flex;
+}
+
+
+a {
+color: rgb(0, 0, 0) !important;
+font-family: "Gilda Display", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: medium;
+  
+}
+
+a:hover {
+  color: hotpink !important;
+}
+
+.navbar {
+  background-color: rgb(255, 255, 255) !important;
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+
+ 
+
+    .card-title, .card-text {
+      font-size: x-small;
+    }
+
+    .wrap {
+      margin-left: 1%;
+      margin-right: 1%;
+    }
+
+    .bound {
+      position: relative;
+     margin: 1.5%;
+     align-items: center;
+     justify-content: space-evenly;
+     overflow: hidden;
+    }
+
+    .bound .overlay{
+
+      position: relative;
+      bottom: 0;
+       display: block;
+       padding: 0%;
+     }
+
+     .btnalign {
+      justify-content: center;
+     }
+    
+      .flex-column {
+
+      padding: 44px !important;
+      padding-top: 0px !important;
+      padding-bottom: 10px !important;
+     
+     }
+
+    
 
 }

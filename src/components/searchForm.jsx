@@ -1,3 +1,5 @@
+import '../App.css';
+
 import React, { useState } from "react";
 
 function SearchForm({ onSearch }) {
@@ -20,7 +22,7 @@ function SearchForm({ onSearch }) {
           onChange={(e) => setSearchArt(e.target.value)}
         />
         <div className="input-group-append">
-          <button type="submit" className="btn btn-primary">Search</button>
+          <button type="submit" className="btn btn-primary btnsearch">Search</button>
         </div>
       </div>
     </form>

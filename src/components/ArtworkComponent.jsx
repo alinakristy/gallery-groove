@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import BasicMasonry from './Masonry';
 import SearchForm from './searchForm';
+import '../App.css';
 
 const ArtworkComponent = () => {
   const [artworks, setArtworks] = useState([]);

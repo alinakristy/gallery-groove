@@ -1,5 +1,6 @@
 import CarouselItem from './CarouselItem';
 import projects from '../data/projects.json';
+import '../App.css';
 
 function Carousel() {
 

@@ -1,3 +1,5 @@
+import '../App.css';
+
 function CarouselItem(props) {
 
     function description() {
