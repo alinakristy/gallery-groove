@@ -10,11 +10,6 @@ Gallery Groove is your virtual gallery space where you can immerse yourself in t
 Featuring an eclectic mix of artworks spanning various styles, genres, and periods, Gallery Groove invites you to embark on a journey of artistic exploration like never before. From captivating paintings and sculptures to mesmerizing digital art and beyond, there's no shortage of creativity to ignite your imagination and nourish your soul.
 
 
-
-DEPLOY LINK
-https://https://main--fancy-nougat-d5b169.netlify.app/
-
-
 ## APIs
 **Art Institute of Chicago API**: We employed  the Art Institute of Chicago API to bring you an extensive collection of artworks from one of the world's most renowned art institutions. Leveraging the Art Institute of Chicago API, we ensure that you have access to top-quality art pieces that will leave you in awe. Explore the API documentation [here](https://api.artic.edu/docs/) for more information.
 
@@ -35,6 +30,9 @@ Installation not required, use the deployed link listed under Usage.
 
 ## Usage
 
+Navigate to the site using the following deployed link:
+https://main--fancy-nougat-d5b169.netlify.app/
+
 At Gallery Groove, our platform offers an immersive landing page filled with captivating artworks waiting to be discovered. Users can explore a diverse collection of art pieces, each curated to spark inspiration and ignite the imagination.
 
 Search and Discover
@@ -47,16 +45,20 @@ More Information
 For those who wish to learn more about a particular artwork, Gallery Groove provides a "More Information" section. By clicking on the artwork or accessing the detailed view, users can explore in-depth information about the piece, including its artist, medium, dimensions, and more. Additionally, users can view high-quality images of the artwork and access related content, providing a comprehensive understanding of the piece's significance and context.
 
 ## Credit
-Xanthe Horner - Tech Lead, Design, User Interface, User Experience, APIs
+**Xanthe Horner** - Tech Lead, Design, User Interface, User Experience, APIs
 
-Alina-Cristi Osipov - Documentation, Design, User Experience, User Interface, API
+**Alina-Cristi Osipov** - Documentation, Design, User Experience, User Interface, API
 
-Sara Badini Confalonieri - User Experience, Design
+**Sara Badini Confalonieri** - User Experience, Design
 
-Najima Musa - APIs, User Experience, User Interface
+**Najima Musa** - APIs, User Experience, User Interface
 
 ## License
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 
+## Others
+
+![edX](https://img.shields.io/badge/edX-%2302262B.svg?style=for-the-badge&logo=edX&logoColor=white) ![Bootstrap](https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white) ![jQuery](https://img.shields.io/badge/jquery-%230769AD.svg?style=for-the-badge&logo=jquery&logoColor=white) ![NPM](https://img.shields.io/badge/NPM-%23CB3837.svg?style=for-the-badge&logo=npm&logoColor=white) ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white) 
 
