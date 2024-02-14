@@ -52,30 +52,38 @@ export default function BasicMasonry({ artworks }) {
 
   function showFavIcon(artwork) {
     if (favesArray.some(item => item.id === artwork.id)) {
-      return <FaHeart size={32}/>;
+      return <FaHeart size={32} />;
     } else {
-      return <CiHeart size={32}/>;
+      return <CiHeart size={32} />;
     }
 
   }
 
+  const Container = styled(Box)({
+    display: 'flex',
+    justifyContent: 'center',
+    margin: '20px',
+  });
+
   return (
-    <Box sx={{ width: '100%', minHeight: 393 }}>
-      <Masonry columns={4} spacing={2} sx={{ width: '100%' }}>
+    <Container>
+      <Masonry columns={{ xs: 1, sm: 2, md: 4 }} spacing={2} sx={{ width: '100%' }}>
         {artworks.map((artwork, index) => (
           <Item key={index}>
             <img src={artwork.iiifAPI} alt={artwork.title} style={{ width: '100%', height: 'auto' }} />
-            <h5 className="overlay card-title my-2 fw-semibold">{artwork.title}</h5>
-            <p className="overlay card-text my-2 fst-italic">{artwork.artist_display}</p>
-            <button type="submit" className="btn" onClick={() => handleButtonClick(artwork)}>{showFavIcon(artwork)}</button>
-            <button type="submit" className="btn" onClick={() => handleButtonClickInfo(artwork)}> <Link to={"details"}> <FaCircleInfo size={32}/> </Link></button>
+            <div className="my-3">
+              <h5 className="overlay card-title mt-8 mx-3 fw-semibold">{artwork.title}</h5>
+              <p className="overlay card-text my-2 mx-3  fst-italic">{artwork.artist_display}</p>
+              <button type="submit" className="btn" onClick={() => handleButtonClick(artwork)}>{showFavIcon(artwork)}</button>
+              <button type="submit" className="btn" onClick={() => handleButtonClickInfo(artwork)}> <Link to={"details"}> <FaCircleInfo size={32} /> </Link></button>
 
-            {messageMap[artwork.id] && (
-              <div>{messageMap[artwork.id]}</div>
-            )}
+              {messageMap[artwork.id] && (
+                <div>{messageMap[artwork.id]}</div>
+              )}
+            </div>
           </Item>
         ))}
       </Masonry>
-    </Box>
+    </Container>
   );
 }

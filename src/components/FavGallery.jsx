@@ -3,7 +3,7 @@ import Packery from 'packery';
 import imagesLoaded from 'imagesloaded';
 import Draggabilly from 'draggabilly';
 import { Paper, useMediaQuery, useTheme } from '@mui/material';
-import { Link, Route, Routes } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { FaHeart } from "react-icons/fa";
 import { FaCircleInfo } from "react-icons/fa6";
 
@@ -61,46 +61,43 @@ function FavGallery() {
   );
 }
 
-
-
-//Img Item in Gallery
+// Img Item in Gallery
 function Item({ artwork, onRemove, isMdScreen }) {
   const [isHovered, setIsHovered] = useState(false);
-  const touchStartTime = useRef(null);
-  const [selectedArtworkId, setSelectedArtworkId] = React.useState(null);
 
-  const handleTouchStart = () => {
-    touchStartTime.current = Date.now();
+  const handleMouseEnter = () => {
+    setIsHovered(true);
   };
 
-  const handleTouchEnd = () => {
-    if (Date.now() - touchStartTime.current < 500) {
-      setIsHovered(true);
-    }
+  const handleMouseLeave = () => {
+    setIsHovered(false);
   };
 
   const handleButtonClickInfo = (artwork) => {
-    setSelectedArtworkId(artwork.id);
     localStorage.setItem("selectedArtworkId", artwork.id);
+  };
+
+  const handleHeartButtonClick = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    onRemove();
   };
 
   return (
     <Paper
-      className="grid-item d-flex align-items-center flex-column"
+      className="grid-item"
       style={{ padding: 5, position: 'relative', width: isMdScreen ? '22%' : '47.5%' }}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-      onTouchStart={handleTouchStart}
-      onTouchEnd={handleTouchEnd}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+      onClick={() => handleButtonClickInfo(artwork)}
     >
-      <img src={artwork.iiifAPI} alt={artwork.title} style={{ width: '100%', height: 'auto' }} />
-      <h5 className="overlay card-title my-2 fw-semibold">{artwork.title}</h5>
-      <p className="overlay card-text my-2 fst-italic">{artwork.artist_display}</p>
-      <div className="d-flex align-items-center flex-row">
-      <button type="submit" className="btn" onClick={() => onRemove()}><FaHeart size={32}/></button>
-      <button type="submit" className="btn" onClick={() => handleButtonClickInfo(artwork)}> <Link to={"/details"}>  <FaCircleInfo size={32}/></Link>
-      </button>
-      </div>
+      <img src={artwork.iiifAPI} alt={artwork.title} style={{ width: '100%' }} />
+      {isHovered && (
+        <div style={{ position: 'absolute', top: '10px', right: '10px',}}>
+          <button type="submit" className="btn" onClick={handleHeartButtonClick}><FaHeart size={32} /></button>
+          <Link to={"/details"}><FaCircleInfo size={32} /></Link>
+        </div>
+      )}
     </Paper>
   );
 }
