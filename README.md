@@ -10,6 +10,14 @@ Gallery Groove is your virtual gallery space where you can immerse yourself in t
 Featuring an eclectic mix of artworks spanning various styles, genres, and periods, Gallery Groove invites you to embark on a journey of artistic exploration like never before. From captivating paintings and sculptures to mesmerizing digital art and beyond, there's no shortage of creativity to ignite your imagination and nourish your soul.
 
 
+
+<img src="src/assets/gif_gallery_groove_longer.gif" width="700" />
+
+
+DEPLOY LINK
+https://main--fancy-nougat-d5b169.netlify.app/
+
+
 ## APIs
 **Art Institute of Chicago API**: We employed  the Art Institute of Chicago API to bring you an extensive collection of artworks from one of the world's most renowned art institutions. Leveraging the Art Institute of Chicago API, we ensure that you have access to top-quality art pieces that will leave you in awe. Explore the API documentation [here](https://api.artic.edu/docs/) for more information.
 
