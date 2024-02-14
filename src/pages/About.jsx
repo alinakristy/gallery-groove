@@ -31,7 +31,7 @@ function About() {
         <Card style={{ width: '18rem' }} className='px-2 py-2'>
             <Card.Img variant="top" src={sara} className='rounded'/>
             <Card.Body>
-                <Card.Title>Conflalonieri Badini Sara</Card.Title>
+                <Card.Title>Sara Badini Confalonieri</Card.Title>
                 <Card.Text>
                 Pixel perfectionist and coding enthusiast. Crafting user experiences that not only look good but feel intuitive. Excited to bring creativity to your frontend projects!
                 </Card.Text>
