@@ -1,5 +1,13 @@
-# gallery-groove
+# Gallery Groove
 
+Welcome to Gallery Groove - your ultimate destination for art enthusiasts who crave their daily dose of artistic inspiration! 🎨✨
+
+Gallery Groove is a collaborative project designed by a group of passionate art lovers, just like you! Our platform is dedicated to providing a delightful experience for those seeking to explore and discover stunning artworks from all around the world.
+
+## Description 
+Gallery Groove is your virtual gallery space where you can immerse yourself in the beauty of art without leaving the comfort of your home. Whether you're an avid collector, a curious explorer, or simply someone who appreciates the finer things in life, our platform has something special in store for you.
+
+Featuring an eclectic mix of artworks spanning various styles, genres, and periods, Gallery Groove invites you to embark on a journey of artistic exploration like never before. From captivating paintings and sculptures to mesmerizing digital art and beyond, there's no shortage of creativity to ignite your imagination and nourish your soul.
 
 
 
@@ -7,69 +15,48 @@ DEPLOY LINK
 https://https://main--fancy-nougat-d5b169.netlify.app/
 
 
+## APIs
+**Art Institute of Chicago API**: We employed  the Art Institute of Chicago API to bring you an extensive collection of artworks from one of the world's most renowned art institutions. Leveraging the Art Institute of Chicago API, we ensure that you have access to top-quality art pieces that will leave you in awe. Explore the API documentation [here](https://api.artic.edu/docs/) for more information.
+
+**International Image Interoperability Framework (IIIF)**: Our platform leverages the International Image Interoperability Framework (IIIF) to deliver stunning visuals that bring the magic of art to life. IIIF provides a standardized way to access and present images, enabling us to offer high-quality images that showcase the beauty and intricacy of each artwork in all its glory. Learn more about IIIF [here](https://iiif.io/).
 
 
-<img src="assets/images/weather-gif-1.gif" width="600" />
+## Libraries/Technologies
+Packery: Packery is used to implement a masonry layout, allowing artworks to be dynamically arranged in a visually pleasing grid. With Packery, Gallery Groove achieves a modern and responsive layout that adapts seamlessly to various screen sizes, providing users with an optimal viewing experience.
 
+Tailwind CSS: Tailwind CSS is a utility-first CSS framework that enables rapid UI development with its extensive set of pre-built utility classes. Gallery Groove leverages Tailwind CSS to style and layout its components, ensuring a sleek and consistent design across the platform. With Tailwind CSS, developers can quickly customize styles, achieve responsive design, and streamline the development process, resulting in a polished and visually appealing user interface.
 
+Draggabilly: Draggabilly is a lightweight JavaScript library used to make elements draggable. Gallery Groove utilizes Draggabilly to implement a draggable feature for images on the gallery favorites page, allowing users to rearrange their favorite artworks to their liking. With Draggabilly, users can easily organize their collection and personalize their browsing experience, adding an interactive touch to the platform.
 
 ## Installation
+Installation not required, use the deployed link listed under Usage.
 
-Follow the deploy link to visit the app.
+## Demo
 
+## Usage
 
-## Usage 
+At Gallery Groove, our platform offers an immersive landing page filled with captivating artworks waiting to be discovered. Users can explore a diverse collection of art pieces, each curated to spark inspiration and ignite the imagination.
 
-Use the searchbar to search for artworks, then hover over the results to save your favourites. You can then click on the view tab to visit your favourites gallery. If you want to know more about the 
+Search and Discover
+Using the search functionality at the top of the page, users can enter keywords related to their desired art pieces. Gallery Groove will then display a curated selection of artworks that match the search criteria, allowing users to easily find pieces that resonate with their interests and preferences.
 
+Favorites
+If users find an artwork that speaks to their soul, they can tap the heart icon to add it to their favorites collection. This feature allows users to create a personalized gallery of their most cherished artworks, making it easy to revisit and admire them at any time.
 
-## Credits
+More Information
+For those who wish to learn more about a particular artwork, Gallery Groove provides a "More Information" section. By clicking on the artwork or accessing the detailed view, users can explore in-depth information about the piece, including its artist, medium, dimensions, and more. Additionally, users can view high-quality images of the artwork and access related content, providing a comprehensive understanding of the piece's significance and context.
 
-Overall instruction and provision of necessary materials for this project from the EdX Front-End Web Development Bootcamp instructor and teaching assistants (Oct2023 Cohort).
+## Credit
+Xanthe Horner - Tech Lead, Design, User Interface, User Experience, APIs
 
-Additionally, the following resources helped us by providing the necessary tools or instructions to complete this task:
+Alina-Cristi Osipov - Documentation, Design, User Experience, User Interface, API
 
-- Creating Bootstrap Modals: https://getbootstrap.com/docs/4.0/components/modal/
-- Fixing Horizontal Scroll Bug with Bootstrap Grid System: https://getbootstrap.com/docs/4.0/layout/grid/
+Sara Badini Confalonieri - User Experience, Design
 
-**Tools we used for our project:**
+Najima Musa - APIs, User Experience, User Interface
 
-- Wireframing in <a href="https://wireframe.cc/">Wireframe CC</a>
-- Header image: Photo by <a href="https://unsplash.com/@whatyouhide?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Andrea Leopardi</a> on <a href="https://unsplash.com/photos/person-running-on-road-at-daytime-QVD3Xht9txA?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
-- Brand logo and icons created with <a href= "https://www.canva.com/logos/?utm_source=google_sem&utm_medium=cpc&utm_campaign=uk_en_all_payback_rev_conversion_logo_em&utm_adgroup=uk_en_all_payback_rev_conversion_Free_Logo-Maker_em&utm_keyword=free+logo+maker&gclid=CjwKCAiAvoqsBhB9EiwA9XTWGb0GULxfS648ulMqzkobHngmB8Gv7Bs8L3PBxV8zVZhBjZ8wjl7-ixoCMt0QAvD_BwE&gclsrc=aw.ds">Canva</a>
-- Fonts (Catamaran and Montserrat) chosen with <a href="https://fontjoy.com/">FontJoy</a>
-- Fonts accessed through <a href="https://fonts.google.com/">Google Fonts</a>
-- Brand colours chosen with the help of <a href="https://coolors.co/181f3a-f0e2a3-8acdea">Coolors</a>
-- Project management on <a href="https://trello.com/">Trello</a>
-- Creating gradient backgrounds <a href="https://gradients.shecodes.io/gradients"> SheCodes.io </a>
-- Creative copywriting ideas for the application content from <a href="https://chat.openai.com/">ChatGPT(OpenAI) </a>
-
-**APIs:**
-
-- Open Weather Map API: https://openweathermap.org/api
-- Fitness Exercises API: https://rapidapi.com/justin-WFnsXH_t6/api/exercisedb
-
-Badges at the bottom of this README file were listed with the help of the following repository: https://github.com/Ileriayo/markdown-badges
 ## License
-MIT License
 
-Copyright (c) 2023 Xanthe E. Horner
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
 
