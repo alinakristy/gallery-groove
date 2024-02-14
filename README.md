@@ -11,8 +11,11 @@ Featuring an eclectic mix of artworks spanning various styles, genres, and perio
 
 
 
+<img src="src/assets/gif_gallery_groove_longer.gif" width="700" />
+
+
 DEPLOY LINK
-https://https://main--fancy-nougat-d5b169.netlify.app/
+https://main--fancy-nougat-d5b169.netlify.app/
 
 
 ## APIs
