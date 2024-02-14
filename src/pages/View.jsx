@@ -6,6 +6,7 @@ function View() {
   return (
     <div>
     <h1 className="center">Your Gallery</h1>
+    <hr></hr>
     <FavGallery />
     </div>
   );

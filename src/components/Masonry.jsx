@@ -7,9 +7,6 @@ import { Link, Route, Routes } from 'react-router-dom';
 import { FaHeart } from "react-icons/fa";
 import { CiHeart } from "react-icons/ci";
 import { FaCircleInfo } from "react-icons/fa6";
-import '../App.css';
-import '../index.css';
-
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -55,40 +52,48 @@ export default function BasicMasonry({ artworks }) {
 
   function showFavIcon(artwork) {
     if (favesArray.some(item => item.id === artwork.id)) {
-      return <FaHeart />;
+      return <FaHeart size={20} />;
     } else {
-      return <CiHeart />;
+      return <CiHeart size={20} />;
     }
 
   }
 
+  const Container = styled(Box)({
+    display: 'flex',
+    justifyContent: 'center',
+    margin: '20px',
+  });
+
   return (
-    <div className ="wrap">
-    <Box sx={{ width: '100%', minHeight: 393 }}>
-      <Masonry columns={4} spacing={3} sx={{ width: '100%' }}>
-        {artworks.map((artwork, index) => (
-          
-          <Item key={index}>
-            <div className="bound">
-            <img src={artwork.iiifAPI} alt={artwork.title} className= "pic" style={{ width: '100%', height: 'auto' }} />
-            <div className='overlay'>
-            <h5 className="card-title my-2 fw-semibold">{artwork.title}</h5>
-            <p className=" card-text my-2 fst-italic">{artwork.artist_display}</p>
-            <div className="btnalign">
-            <button type="submit" className="btn btn1" onClick={() => handleButtonClick(artwork)}>{showFavIcon(artwork)}</button>
-            <button type="submit" className="btn btn1" onClick={() => handleButtonClickInfo(artwork)}> <Link to={"details"}> <FaCircleInfo/> </Link></button>
-            </div>
-            {messageMap[artwork.id] && (
-              <div>{messageMap[artwork.id]}</div>
-              
-            )}
-            </div>
-             </div>
-          </Item>
-         
-        ))}
-      </Masonry>
-    </Box>
-    </div>
+    <Container>
+      
+
+        <Masonry columns={{ xs: 2, sm: 2, md: 4 }} spacing={3} sx={{ width: '100%' }}>
+          {artworks.map((artwork, index) => (
+
+            <Item key={index}>
+              <div className="bound">
+                <img src={artwork.iiifAPI} alt={artwork.title} className="pic" style={{ width: '100%', height: 'auto' }} />
+                <div className='overlay'>
+                  <h5 className="card-title my-2 fw-semibold">{artwork.title}</h5>
+                  <p className=" card-text my-2 fst-italic">{artwork.artist_display}</p>
+                  <div className="btnalign">
+                    <button type="submit" className="btn btn1" onClick={() => handleButtonClick(artwork)}>{showFavIcon(artwork)}</button>
+                    <button type="submit" className="btn btn1" onClick={() => handleButtonClickInfo(artwork)}> <Link to={"details"}> <FaCircleInfo size={22} /> </Link></button>
+                  </div>
+                  {messageMap[artwork.id] && (
+                    <div>{messageMap[artwork.id]}</div>
+
+                  )}
+                </div>
+              </div>
+            </Item>
+
+          ))}
+        </Masonry>
+
+      
+    </Container>
   );
 }
