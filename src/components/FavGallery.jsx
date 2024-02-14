@@ -90,9 +90,9 @@ function Item({ artwork, onRemove, isMdScreen }) {
       onMouseLeave={handleMouseLeave}
       onClick={() => handleButtonClickInfo(artwork)}
     >
-      <img src={artwork.iiifAPI} alt={artwork.title} style={{ width: '100%' }} />
+      <img src={artwork.iiifAPI} alt={artwork.title} className="pic" style={{ width: '100%' }} />
       {isHovered && (
-        <div style={{ position: 'absolute', top: '10px', right: '10px', backgroundColor: 'white', paddingRight:'12px'}}>
+        <div style={{ position: 'absolute', top: '10px', right: '10px', backgroundColor: 'none', paddingRight:'12px'}}>
           <button type="submit" className="btn btn1" onClick={handleHeartButtonClick}><FaHeart size={32} /></button>
           <Link to={"/details"}><FaCircleInfo size={32} /></Link>
         </div>

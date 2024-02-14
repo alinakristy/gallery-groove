@@ -8,6 +8,9 @@ import { FaHeart } from "react-icons/fa";
 import { CiHeart } from "react-icons/ci";
 import { FaCircleInfo } from "react-icons/fa6";
 
+
+
+
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
   ...theme.typography.body2,
@@ -31,6 +34,10 @@ export default function BasicMasonry({ artworks }) {
   }
 
   const handleButtonClick = (artwork) => {
+
+  
+
+    
     // Checking if artwork exists
     if (!favesArray.some(item => item.id === artwork.id)) {
       const updatedFavesArray = [...favesArray, artwork];
@@ -66,7 +73,7 @@ export default function BasicMasonry({ artworks }) {
   });
 
   return (
-    <Container>
+    <div className = "wrap">
       
 
         <Masonry columns={{ xs: 2, sm: 2, md: 4 }} spacing={3} sx={{ width: '100%' }}>
@@ -94,6 +101,6 @@ export default function BasicMasonry({ artworks }) {
         </Masonry>
 
       
-    </Container>
+    </div>
   );
 }

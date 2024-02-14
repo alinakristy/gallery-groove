@@ -98,11 +98,12 @@ h3 {
 
 .btnsearch:hover {
 
-  background-color: hotpink;
+  background-color: hotpink !important;
+  border: none !important;
 }
 
 .btn1:hover {
-  color: hotpink;
+  color: hotpink !important;
 }
 
 .center {
