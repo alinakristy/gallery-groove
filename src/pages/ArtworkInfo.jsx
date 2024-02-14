@@ -1,5 +1,7 @@
 import InfoCall from "../components/InfoCall";
-//import '.'
+import '../App.css';
+
+
 function ArtworkInfo(){
 
 
