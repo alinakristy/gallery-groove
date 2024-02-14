@@ -12,7 +12,7 @@ Featuring an eclectic mix of artworks spanning various styles, genres, and perio
 
 
 DEPLOY LINK
-https://https://main--fancy-nougat-d5b169.netlify.app/
+https://main--fancy-nougat-d5b169.netlify.app/
 
 
 ## APIs
