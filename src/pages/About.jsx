@@ -65,7 +65,7 @@ function About() {
                 </Card.Text>
                 <div className="d-flex justify-content-lg-center" style={{ gap: '1rem' }}>
                     <a className='btn btn-secondary px-1 py-1 col-4' href='https://github.com/najmamusa'><FaGithub size={32}/></a>
-                    <a className='btn btn-primary px-1 py-1 col-4' href='https://google.com/'><FaLinkedinIn size={32}/></a>
+                    <a className='btn btn-primary px-1 py-1 col-4' href='http://www.linkedin.com/in/najmamusa'><FaLinkedinIn size={32}/></a>
                 </div>
             </Card.Body>
         </Card>
