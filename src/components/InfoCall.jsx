@@ -45,7 +45,7 @@ const InfoCall = () => {
                     <img src={`https://www.artic.edu/iiif/2/${artworkData.image_id}/full/843,/0/default.jpg`} className="imgdisplay" alt={artworkData.title} />
                     <br></br>
                     <br></br>
-                    {getridoftags(artworkData.description)}
+                    <p>{getridoftags(artworkData.description)}</p>
 
                     <br></br>
 

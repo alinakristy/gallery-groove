@@ -3,9 +3,11 @@ import Packery from 'packery';
 import imagesLoaded from 'imagesloaded';
 import Draggabilly from 'draggabilly';
 import { Paper, useMediaQuery, useTheme } from '@mui/material';
-import { Link } from 'react-router-dom';
+import { Link, Route, Routes } from 'react-router-dom';
 import { FaHeart } from "react-icons/fa";
 import { FaCircleInfo } from "react-icons/fa6";
+//import '../App.css';
+
 
 function FavGallery() {
   const [faveData, setFaveData] = useState([]);
@@ -46,11 +48,13 @@ function FavGallery() {
   };
 
   return (
+    
     <div ref={gridRef} className="grid">
       <div className="grid-sizer" style={{ width: isMdScreen ? '22%' : '49.90%' }}></div>
-      <div className="gutter-sizer" style={{ width: isMdScreen ? '4%' : '0.1%' }}></div>
+      <div className="gutter-sizer" style={{ width: isMdScreen ? '4%' : '0.2%' }}></div>
       {faveData.map((element, index) => (
-        <Item
+       
+       <Item
           key={index}
           artwork={element}
           onRemove={() => handleRemoveButtonClick(element.id)}
@@ -61,44 +65,53 @@ function FavGallery() {
   );
 }
 
-// Img Item in Gallery
+
+
+//Img Item in Gallery
 function Item({ artwork, onRemove, isMdScreen }) {
   const [isHovered, setIsHovered] = useState(false);
+  const touchStartTime = useRef(null);
+  const [selectedArtworkId, setSelectedArtworkId] = React.useState(null);
 
-  const handleMouseEnter = () => {
-    setIsHovered(true);
+  const handleTouchStart = () => {
+    touchStartTime.current = Date.now();
   };
 
-  const handleMouseLeave = () => {
-    setIsHovered(false);
+  const handleTouchEnd = () => {
+    if (Date.now() - touchStartTime.current < 500) {
+      setIsHovered(true);
+    }
   };
 
   const handleButtonClickInfo = (artwork) => {
+    setSelectedArtworkId(artwork.id);
     localStorage.setItem("selectedArtworkId", artwork.id);
   };
 
-  const handleHeartButtonClick = (e) => {
-    e.preventDefault();
-    e.stopPropagation();
-    onRemove();
-  };
-
   return (
+   
     <Paper
-      className="grid-item"
-      style={{ padding: 5, position: 'relative', width: isMdScreen ? '22%' : '47.5%' }}
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-      onClick={() => handleButtonClickInfo(artwork)}
+      className="grid-item d-flex align-items-center flex-column wrap1"
+      style={{  padding: 5,  position: 'relative', width: isMdScreen ? '22%' : '0' }}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      onTouchStart={handleTouchStart}
+      onTouchEnd={handleTouchEnd}
     >
-      <img src={artwork.iiifAPI} alt={artwork.title} style={{ width: '100%' }} />
-      {isHovered && (
-        <div style={{ position: 'absolute', top: '10px', right: '10px',}}>
-          <button type="submit" className="btn" onClick={handleHeartButtonClick}><FaHeart size={32} /></button>
-          <Link to={"/details"}><FaCircleInfo size={32} /></Link>
-        </div>
-      )}
+      <div className="bound">
+      <img src={artwork.iiifAPI} alt={artwork.title} className= "pic"  style={{ width: '100%', height: 'auto' }} />
+      <div className='overlay'>
+      <h5 className=" card-title my-2 fw-semibold">{artwork.title}</h5>
+      <p className="card-text my-2 fst-italic">{artwork.artist_display}</p>
+      <div className="d-flex align-items-center flex-row">
+      <button type="submit" className="btn btn1" onClick={() => onRemove()}><FaHeart /></button>
+      <button type="submit" className="btn btn1" onClick={() => handleButtonClickInfo(artwork)}> <Link to={"/details"}>  <FaCircleInfo /></Link>
+      </button>
+      </div>
+      </div>
+      </div>
     </Paper>
+   
   );
 }
 

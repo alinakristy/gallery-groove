@@ -1,6 +1,7 @@
 import CardGroup from 'react-bootstrap/CardGroup'
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import '../App.css';
 
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";

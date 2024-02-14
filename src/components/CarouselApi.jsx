@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import CarouselItem from './CarouselItem';
+import '../App.css';
 
 const CarouselApi = () => {
     const [artworks, setArtworks] = useState([]);

@@ -7,6 +7,9 @@ import { Link, Route, Routes } from 'react-router-dom';
 import { FaHeart } from "react-icons/fa";
 import { CiHeart } from "react-icons/ci";
 import { FaCircleInfo } from "react-icons/fa6";
+import '../App.css';
+import '../index.css';
+
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -52,9 +55,9 @@ export default function BasicMasonry({ artworks }) {
 
   function showFavIcon(artwork) {
     if (favesArray.some(item => item.id === artwork.id)) {
-      return <FaHeart size={32} />;
+      return <FaHeart />;
     } else {
-      return <CiHeart size={32} />;
+      return <CiHeart />;
     }
 
   }
@@ -66,24 +69,32 @@ export default function BasicMasonry({ artworks }) {
   });
 
   return (
-    <Container>
-      <Masonry columns={{ xs: 1, sm: 2, md: 4 }} spacing={2} sx={{ width: '100%' }}>
+    <div className ="wrap">
+    <Box sx={{ width: '100%', minHeight: 393 }}>
+      <Masonry columns={4} spacing={3} sx={{ width: '100%' }}>
         {artworks.map((artwork, index) => (
+          
           <Item key={index}>
-            <img src={artwork.iiifAPI} alt={artwork.title} style={{ width: '100%', height: 'auto' }} />
-            <div className="my-3">
-              <h5 className="overlay card-title mt-8 mx-3 fw-semibold">{artwork.title}</h5>
-              <p className="overlay card-text my-2 mx-3  fst-italic">{artwork.artist_display}</p>
-              <button type="submit" className="btn" onClick={() => handleButtonClick(artwork)}>{showFavIcon(artwork)}</button>
-              <button type="submit" className="btn" onClick={() => handleButtonClickInfo(artwork)}> <Link to={"details"}> <FaCircleInfo size={32} /> </Link></button>
-
-              {messageMap[artwork.id] && (
-                <div>{messageMap[artwork.id]}</div>
-              )}
+            <div className="bound">
+            <img src={artwork.iiifAPI} alt={artwork.title} className= "pic" style={{ width: '100%', height: 'auto' }} />
+            <div className='overlay'>
+            <h5 className="card-title my-2 fw-semibold">{artwork.title}</h5>
+            <p className=" card-text my-2 fst-italic">{artwork.artist_display}</p>
+            <div className="btnalign">
+            <button type="submit" className="btn btn1" onClick={() => handleButtonClick(artwork)}>{showFavIcon(artwork)}</button>
+            <button type="submit" className="btn btn1" onClick={() => handleButtonClickInfo(artwork)}> <Link to={"details"}> <FaCircleInfo/> </Link></button>
             </div>
+            {messageMap[artwork.id] && (
+              <div>{messageMap[artwork.id]}</div>
+              
+            )}
+            </div>
+             </div>
           </Item>
+         
         ))}
       </Masonry>
-    </Container>
+    </Box>
+    </div>
   );
 }
