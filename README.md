@@ -11,13 +11,6 @@ Featuring an eclectic mix of artworks spanning various styles, genres, and perio
 
 
 
-<img src="src/assets/gif_gallery_groove_longer.gif" width="700" />
-
-
-DEPLOY LINK
-https://main--fancy-nougat-d5b169.netlify.app/
-
-
 ## APIs
 **Art Institute of Chicago API**: We employed  the Art Institute of Chicago API to bring you an extensive collection of artworks from one of the world's most renowned art institutions. Leveraging the Art Institute of Chicago API, we ensure that you have access to top-quality art pieces that will leave you in awe. Explore the API documentation [here](https://api.artic.edu/docs/) for more information.
 
@@ -35,6 +28,7 @@ Draggabilly: Draggabilly is a lightweight JavaScript library used to make elemen
 Installation not required, use the deployed link listed under Usage.
 
 ## Demo
+<img src="src/assets/gif_gallery_groove_longer.gif" width="700" />
 
 ## Usage
 
